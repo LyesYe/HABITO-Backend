@@ -8,13 +8,23 @@ const mongoose = require("mongoose"),
             type: String,
             unique: true,
         },
-        terra_id : String,
+        terra_id : {type: String,},
         disease : [{ 
             type: String,
            
         }],
+        "first_name": String,
+        "last_name": String,
+        "gender": String,
+        "sex": String,
+        "date_of_birth": String,
+        "bio": String,
+        "email": String,
+        "city": String,
+        "state": String,
+        "country": String,
 
-    });
+});
     
     userSchema.pre("save", async function (next) {
         try {
