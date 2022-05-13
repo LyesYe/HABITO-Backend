@@ -9,8 +9,15 @@ const mongoose = require("mongoose"),
         progress : Number,
         goal : Number,
         unit : String,
-        reward : Number,
-        penalty : Number,
+        reward : {
+            type : Number,
+            default : 10
+        }
+        ,
+        penalty : {
+            type : Number,
+            default : 
+        },
         maxTH : Number,
         minTH : Number,
 

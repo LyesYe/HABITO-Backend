@@ -1,5 +1,5 @@
 const express = require("express"),
-    { isLoggedIn, isAdmin } = require("../middleware/auth"),
+    { isLoggedIn, getHabit } = require("../middleware/auth"),
     { showUser, updateUser,deleteUser } = require("../middleware/user");
 router = express.Router();
 // /users

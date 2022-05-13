@@ -67,6 +67,15 @@ module.exports = {
             res.json({ error: e.message });
         }
     },
+    getUserHabits :  async (req, res) => {
+        const id = req.params.id;
+        try {
+            const u = await User.findById(id);
+            res.status(200).json(u.habits)
+        } catch (e) {
+            res.json({ error: e.message });
+        }
+    },
     userToAdmin: async (req, res) => {
         const id = req.params.id;
         try {

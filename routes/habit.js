@@ -1,7 +1,8 @@
 const express = require("express"),
 
-{ getHabits }  = require("../middleware/user");
+{ getuUserHabits , getHabit}  = require("../middleware/user");
 
-router.get(getHabit);
+router.get( "/user/:id",getUserHabit);
+router.get( "/:id",getHabit);
 
 router = express.Router();
