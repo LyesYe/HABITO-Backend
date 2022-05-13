@@ -16,7 +16,7 @@ const mongoose = require("mongoose"),
         ,
         penalty : {
             type : Number,
-            default : 
+            default : 5
         },
         maxTH : Number,
         minTH : Number,

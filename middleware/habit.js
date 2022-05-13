@@ -15,7 +15,7 @@ module.exports = {
     },
     getHabit : async(req,res) => {
         const id = req.params.id;
-        try {
+        try {s
             const habi = await Habit.findById(id);
             res.json(habi);
         } catch (e) {
