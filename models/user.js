@@ -3,28 +3,12 @@ const mongoose = require("mongoose"),
     bcrypt = require("bcrypt"),
     
     userSchema = new mongoose.Schema({
-        email: {
-            required: true,
-            type: String,
-            unique: true,
-        },
         username: {
             required: true,
             type: String,
             unique: true,
         },
-        first_Name: {
-            required: true,
-            type: String,
-        },
-        last_Name: {
-            required: true,
-            type: String,
-        },
-        password: {
-            type: String,
-            required: true,
-        },
+        terra_id : String,
         disease : [{ 
             type: String,
            
