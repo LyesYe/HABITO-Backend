@@ -24,6 +24,7 @@
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.3",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "terra-api": "^1.0.4"
   }
 }
