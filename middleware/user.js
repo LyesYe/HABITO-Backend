@@ -13,8 +13,18 @@ module.exports = {
           });
           atheleteData = athlete.data;
 
-
-            let user = await User.create({username, terra_id : user_id});
+            let user = await User.create({username, terra_id : user_id,
+                "first_name":atheleteData.first_name,
+                "last_name": atheleteData.last_name,
+                "gender": atheleteData.gender,
+                "sex": atheleteData.sex,
+                "date_of_birth": atheleteData.date_of_birth,
+                "bio": atheleteData.bio,
+                "email": atheleteData.email,
+                "city": atheleteData.city,
+                "state": atheleteData.state,
+                "country": atheleteData.country
+            });
             user.save();
         
 
@@ -24,12 +34,9 @@ module.exports = {
         }
     },
     logUser: async (req, res) => {
-        const { username, password } = req.body;
         try {
             const user = await User.findOne({ username });
             if (!user) throw new Error("We didn't find any user with this username : " + username);
-            if (!(await user.comparePasswords(password)))
-                throw Error("Wrong Password,Try again !!");
             res.status(201).json(user.insertToken());
         } catch (e) {
             res.json({ error: e.message });

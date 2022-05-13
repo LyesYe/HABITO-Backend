@@ -12,6 +12,12 @@ const mongoose = require("mongoose"),
             type: String,
            
         }],
+        habits : [{ 
+            type: mongoose.Types.ObjectId,
+            ref:"",
+           
+        }],
+        "balance" : Number,
         "first_name": String,
         "last_name": String,
         "gender": String,
@@ -42,7 +48,6 @@ const mongoose = require("mongoose"),
     };
     userSchema.methods.insertToken = function () {
         let user = this.toObject();
-        delete user.password;
         user.token = jwt.sign(
             {
                 id: user._id,
