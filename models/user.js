@@ -14,10 +14,11 @@ const mongoose = require("mongoose"),
         }],
         habits : [{ 
             type: mongoose.Types.ObjectId,
-            ref:"",
+            ref:"habit",
            
         }],
         "balance" : Number,
+        "heart_attack" : Boolean,
         "first_name": String,
         "last_name": String,
         "gender": String,
