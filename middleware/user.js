@@ -1,19 +1,22 @@
 const User = require("../models/user"),
 Saved = require("../models/savedQuotes");
+import axios from 'axios';
 module.exports = {
     createUser: async (req, res) => {
-        const { email, username, first_Name, last_Name, password } = req.body;
+        const { user_id } = req.query;
         try {
-           
-            let user = await User.create({ email, username, first_Name, last_Name, password});
-            saving = await Saved.create({user});
-            user = await User.findById(user.id);
-           
-            user.savedQuotes =saving;
+          athlete = await axios.get(`https://api.tryterra.co/v2/userInfo/${user_id}`,{
+              headers : {
+               "dev-id" : "npm-init-mate-1PfuWb9SNu",
+               "x-api-key" : "ddcb9824de62d74d8830b65d3eb4fdeabab0d14d8515999ab712449510689c40"
+              }
+          });
+          atheleteData = athlete.data;
+
+
+            let user = await User.create({username, terra_id : user_id});
             user.save();
-            saving.save();
-          
-            console.log(user.savedQuotes);
+        
 
             res.status(201).json(user.insertToken());
         } catch (e) {

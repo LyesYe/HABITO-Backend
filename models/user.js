@@ -4,7 +4,6 @@ const mongoose = require("mongoose"),
     
     userSchema = new mongoose.Schema({
         username: {
-            required: true,
             type: String,
             unique: true,
         },
