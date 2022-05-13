@@ -16,10 +16,11 @@ const mongoose = require("mongoose"),
         ,
         penalty : {
             type : Number,
-            default : 
-        },
+            default : -10
+        }
+        ,
         maxTH : Number,
         minTH : Number,
 
-    })
+    });
     module.exports = mongoose.model("habit", habitSchema);

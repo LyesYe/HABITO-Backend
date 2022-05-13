@@ -17,6 +17,11 @@ const mongoose = require("mongoose"),
             ref:"habit",
            
         }],
+        notifs : [{ 
+            type: mongoose.Types.ObjectId,
+            ref:"notif",
+           
+        }],
         "balance" : Number,
         "heart_attack" : Boolean,
         "first_name": String,
