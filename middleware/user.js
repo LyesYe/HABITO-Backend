@@ -1,6 +1,6 @@
 const User = require("../models/user");
 const Habit = require("../models/habit");
-
+const axios = require('axios')
 module.exports = {
     createUser: async (req, res) => {
         const { user_id } = req.query;
@@ -30,6 +30,7 @@ module.exports = {
 
             res.status(201).json(user.insertToken());
         } catch (e) {
+            console.log(e)
             res.json({ error: e.message });
         }
     },
