@@ -1,7 +1,8 @@
+const axios = require('axios')
+
 const User = require("../models/user"),
     jwt = require("jsonwebtoken");
-    import axios from 'axios'
-module.exports = {
+    module.exports = {
     isLoggedIn: async (req, res, next) => {
         if (!req.headers.authorization)
             return res.status(400).send("You don't have the authorization");

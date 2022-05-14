@@ -36,7 +36,7 @@ module.exports = {
         try {
             if (id.toString() !== req.user._id.toString())
                 throw new Error("You aren't allowed to edit other users profiles.");
-            const u = await User.findById(id);
+            const u = await Habit.findById(id);
             u.name = name ? name : u.name;
             u.progress = progress ? progress : u.progress;
             u.goal = goal ? goal : u.goal;

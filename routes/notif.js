@@ -1,7 +1,7 @@
 const express = require("express"),
 
 
-{ createHabit,getHabit,showAllHabits,deleteHabit ,updateHabit } = require("../middleware/notif");
+{ createNotif,showNotif,showAllNotif,deleteNotif ,updateHabit } = require("../middleware/notif");
 router = express.Router();
 
 

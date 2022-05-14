@@ -1,0 +1,77 @@
+[
+  {
+    "heart_rate_data": {
+      "detailed": { "hr_samples": [], "hrv_samples": [] },
+      "summary": {
+        "avg_hr": null,
+        "max_hr": null,
+        "avg_hr_variability": null,
+        "min_hr": null,
+        "user_hr_max": null
+      }
+    },
+    "temperature_data": { "delta": null },
+    "sleep_durations_data": {
+      "other": {
+        "duration_unmeasurable_sleep": null,
+        "duration_in_bed": 56.68607554341195
+      },
+      "awake": {
+        "num_out_of_bed_events": null,
+        "num_wakeup_events": null,
+        "duration_awake_state": 38.63364577816089,
+        "duration_before_sleeping": 16.685603014623783,
+        "duration_short_interruption": null,
+        "duration_long_interruption": null,
+        "waso": null,
+        "duration_after_wakeup": null
+      },
+      "asleep": {
+        "duration_REM_sleep_state": 42.74257523127279,
+        "num_REM_events": null,
+        "duration_light_sleep_state": 42.68090521309249,
+        "duration_deep_sleep_state": 13.811826203405026,
+        "duration_asleep_state": 7.115588353827027
+      },
+      "hypnogram_samples": [
+        { "timestamp": "2022-05-13T11:06:16.682398+00:00", "level": 4 },
+        { "timestamp": "2022-05-13T11:20:16.682398+00:00", "level": 1 },
+        { "timestamp": "2022-05-13T11:34:16.682398+00:00", "level": 4 },
+        { "timestamp": "2022-05-13T11:48:16.682398+00:00", "level": 5 },
+        { "timestamp": "2022-05-13T12:02:16.682398+00:00", "level": 6 },
+        { "timestamp": "2022-05-13T12:16:16.682398+00:00", "level": 3 }
+      ]
+    },
+    "metadata": {
+      "sleep_efficiency": 52.14862366409495,
+      "start_time": "2022-05-13T11:06:16.682398+00:00",
+      "upload_type": 0,
+      "end_time": "2022-05-13T12:16:16.682398+00:00",
+      "sleep_duration_planned": null
+    },
+    "respiration_data": {
+      "breaths_data": {
+        "samples": [],
+        "on_demand_reading": null,
+        "max_breaths_per_min": null,
+        "start_time": null,
+        "min_breaths_per_min": null,
+        "avg_breaths_per_min": null,
+        "end_time": null
+      },
+      "snoring_data": {
+        "samples": [],
+        "num_snoring_events": null,
+        "start_time": null,
+        "end_time": null,
+        "total_snoring_duration": null
+      },
+      "oxygen_saturation_data": {
+        "samples": [],
+        "on_demand_reading": null,
+        "start_time": null,
+        "end_time": null
+      }
+    }
+  }
+]

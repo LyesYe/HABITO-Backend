@@ -11,6 +11,7 @@ const mongoose = require("mongoose"),
         img : {type: String,},
         price : {type: String,},
         code : {type: String,},
+        storeLink : {type: String,},
  
 
 });

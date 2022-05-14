@@ -1,9 +1,10 @@
-
+const axios = require('axios')
 const express = require("express"),
     app = express(),
     mongoose = require("mongoose"),
     user = require("./models/user"),
     userRouter = require("./routes/user"),
+    userAuth = require("./routes/auth"),
     
 
 
@@ -12,8 +13,9 @@ const express = require("express"),
     port=3000;
 
     app.use(express.json());
-    app.use("/",authRouter);
+    
     app.use("/users", userRouter);
+    app.use("/", userAuth);
     
     mongoose.set("debug", true); // in devolpment process
     mongoose
@@ -22,7 +24,7 @@ const express = require("express"),
         {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex: true,
+
         dbName: "quotesAPI",
     })
     .then((con) => {

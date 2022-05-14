@@ -1,6 +1,6 @@
 const express = require("express"),
     { isLoggedIn } = require("../middleware/auth"),
-    { createProduit, showProduit, deleteProduit , showAllProduit} = require("../middleware/user");
+    { createProduit, showProduit, deleteProduit , showAllProduit} = require("../middleware/produit");
 router = express.Router();
 
 

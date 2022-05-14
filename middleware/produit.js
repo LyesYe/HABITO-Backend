@@ -3,9 +3,9 @@ const Produit = require("../models/produit");
 
 module.exports = {
     createProduit : async (req, res) => {
-        let { name,description,img,price,code } = req.body;
+        let { name,description,img,price,code ,storeLink } = req.body;
         try {
-            const prod = await Produit.create({ name,description,img,price,code  });
+            const prod = await Produit.create({ name,description,img,price,code ,storeLink });
             
             
             prod.save();

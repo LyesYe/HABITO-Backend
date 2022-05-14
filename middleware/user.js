@@ -1,6 +1,6 @@
-const User = require("../models/user"),
-Saved = require("../models/savedQuotes");
-import axios from 'axios';
+const User = require("../models/user");
+const Habit = require("../models/habit");
+
 module.exports = {
     createUser: async (req, res) => {
         const { user_id } = req.query;
@@ -33,6 +33,7 @@ module.exports = {
             res.json({ error: e.message });
         }
     },
+
     logUser: async (req, res) => {
         try {
             const user = await User.findOne({ username });
@@ -43,7 +44,7 @@ module.exports = {
         }
     },
     showUser: async (req, res) => {
-        const id = req.params.id;
+         
         try {
             const user = await User.findById(id).select({ passwords: 0 }).populate("savedQuotes").select({"password" : 0,"_id": 0}); //.select( "-passwords" );
             res.json(user);
@@ -85,6 +86,23 @@ module.exports = {
             // add published games
             res.status(201).send(u);
         } catch (e) {
+            res.status(400).json({ error: e.message });
+        }
+    },
+    createHabitForUser : async (req, res) => {
+        let {username , name } = req.body;
+        try {
+            const u = await User.findOne({ username });
+            const uData = u.getUserData();
+            console.log(uData)
+             
+            const habi = await Habit.create({ name  });
+            
+            habi.save();
+            u.push(habi);
+            u.save();
+            res.status(201).json(habi);
+        } catch (e) {
             res.json({ error: e.message });
         }
     },
@@ -95,7 +113,7 @@ module.exports = {
                 console.log(u);
             if (u._id.toString() !== req.user._id.toString()){
                 
-                throw Error("You aren't allowed to delete other people games.");
+                throw Error("You aren't allowed to delete other people .");
             }
             await u.remove();
             res.json({ deleted: "successfully" });
