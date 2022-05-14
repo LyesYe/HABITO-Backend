@@ -7,7 +7,7 @@ router = express.Router();
 
 router.route("/UserHabits").get(getUserHabits);
 router.route("/createHabitForUser").put(createHabitForUser);
-router.route("/:id").get(showUser).put(isLoggedIn, updateUser).delete(isLoggedIn,deleteUser);
+router.route("/:id").get(showUser).put( updateUser).delete(deleteUser);
 
 module.exports = router;
 

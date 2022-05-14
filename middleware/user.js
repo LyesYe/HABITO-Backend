@@ -3,34 +3,32 @@ const Habit = require("../models/habit");
 const axios = require('axios')
 module.exports = {
     createUser: async (req, res) => {
-        const { user_id } = req.query;
+        const { user_id , username} = req.query;
+        console.log(user_id)
         try {
-          athlete = await axios.get(`https://api.tryterra.co/v2/userInfo/${user_id}`,{
-              headers : {
-               "dev-id" : "npm-init-mate-1PfuWb9SNu",
-               "x-api-key" : "ddcb9824de62d74d8830b65d3eb4fdeabab0d14d8515999ab712449510689c40"
-              }
-          });
-          atheleteData = athlete.data;
 
+                const athlete = await axios.get(`https://api.tryterra.co/v2/athlete/`,
+                {params : {
+                    user_id 
+                },
+                headers : {
+                "dev-id" : "npm-init-mate-1PfuWb9SNu",
+                "x-api-key" : "77646f9662c53cf93e8007c6eabee6c5a5440053195c84a9de65b92c0b09581d"
+                }
+                });
+            
+                console.log('hh')
+
+         
+          console.log(athlete)
             let user = await User.create({username, terra_id : user_id,
-                "first_name":atheleteData.first_name,
-                "last_name": atheleteData.last_name,
-                "gender": atheleteData.gender,
-                "sex": atheleteData.sex,
-                "date_of_birth": atheleteData.date_of_birth,
-                "bio": atheleteData.bio,
-                "email": atheleteData.email,
-                "city": atheleteData.city,
-                "state": atheleteData.state,
-                "country": atheleteData.country
+                "first_name":"Lyes",
+                "last_name": "kh",
             });
             user.save();
-        
-
-            res.status(201).json(user.insertToken());
+        console.log('hh2')
         } catch (e) {
-            console.log(e)
+            console.log("e")
             res.json({ error: e.message });
         }
     },

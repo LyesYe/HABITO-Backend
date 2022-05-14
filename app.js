@@ -7,15 +7,12 @@ const express = require("express"),
     userAuth = require("./routes/auth"),
     
 
-
-
-   
     port=3001;
 
     app.use(express.json());
     
+    app.use("/auth", userAuth);
     app.use("/users", userRouter);
-    app.use("/", userAuth);
     
     mongoose.set("debug", true); // in devolpment process
     mongoose
@@ -25,7 +22,7 @@ const express = require("express"),
         useNewUrlParser: true,
         useUnifiedTopology: true,
 
-        dbName: "quotesAPI",
+        dbName: "HackApi",
     })
     .then((con) => {
         console.log("Database is connected");
