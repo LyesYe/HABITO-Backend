@@ -1,4 +1,4 @@
-const axios = require('axios')
+
 const express = require("express"),
     app = express(),
     mongoose = require("mongoose"),
@@ -10,7 +10,7 @@ const express = require("express"),
 
 
    
-    port=3000;
+    port=3001;
 
     app.use(express.json());
     
