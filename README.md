@@ -28,3 +28,17 @@ rewards can be coupons, promo codes or referral links to products, available in 
 We maximize the use of the data from wearables by using AI to predict if our customer has
 chronic disease, like Diabetes or heart disease. When we detect that the Customer has a
 chronic disease, we notify him so he can start treating the disease in its early stages.
+
+
+# Used Technologies
+![image](https://user-images.githubusercontent.com/64961951/200198922-d2609711-aa12-4111-aa36-dff422d77f0a.png)
+
+
+# The app dashboard
+![Dashboard](https://user-images.githubusercontent.com/64961951/200198979-d9fd4e49-862e-4615-bef2-7139b4932a7d.png)
+
+
+# Prototype
+
+https://www.figma.com/proto/NAoMiGnAqotUqtxUgyYTn9/Habito?node-id=3%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=3%3A2&show-proto-sidebar=1
+
