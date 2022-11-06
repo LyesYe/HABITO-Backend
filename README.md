@@ -9,7 +9,8 @@ Habito is a fun gamified automated habbit tracker, it uses Realtime wearables da
 track our customers habbit.
 Like any habbit app, you can use a habbit to track and change, but what does it make stand
 out?
--Habito has 4 main pillars:
+
+**-Habito has 4 main pillars:**
 ### Automation:
 Habito tracks your habits automatically so that saves you the trouble of having to enter your
 health data (calories taken, sleep, hydration) which can get tedious when repeated daily
