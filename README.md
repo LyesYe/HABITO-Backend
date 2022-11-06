@@ -13,7 +13,8 @@ out?
 **-Habito has 4 main pillars:**
 ### Automation:
 Habito tracks your habits automatically so that saves you the trouble of having to enter your
-health data (calories taken, sleep, hydration) which can get tedious when repeated daily
+health data (calories taken, sleep, hydration) which can get tedious when repeated daily .
+
 ![image](https://user-images.githubusercontent.com/64961951/200199298-065c0b8d-3e8b-4f4c-9539-d1d2ab4b1fb0.png)
 
 ### Customized:
