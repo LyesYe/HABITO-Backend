@@ -45,3 +45,6 @@ chronic disease, we notify him so he can start treating the disease in its early
 
 https://www.figma.com/proto/NAoMiGnAqotUqtxUgyYTn9/Habito?node-id=3%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=3%3A2&show-proto-sidebar=1
 
+# presentation
+
+https://www.canva.com/design/DAFGzUGSAnI/F7LDNQCm8yUddgD_ncO0yQ/view?utm_content=DAFGzUGSAnI&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu
